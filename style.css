@@ -1382,10 +1382,6 @@ footer .container {
     .shop-images { grid-template-columns: 1fr; gap: 14px }
     .shop-main img, .shop-small img { height: 230px }
 
-    .home-page .hero-grid { gap: 26px; padding-top: 36px }
-    .home-page .shop-small { display: none }
-    .home-page .shop-main img { height: 230px; object-position: center }
-
     footer .container { gap: 8px; flex-wrap: wrap; justify-content: center; text-align: center }
 
     .supply-grid { grid-template-columns: 1fr; gap: 30px }
@@ -1474,10 +1470,6 @@ footer .container {
     .stat-row { grid-template-columns: 1fr; gap: 9px; padding: 9px }
     .stat-row div { padding: 24px 14px 20px }
 
-    .home-page .hero-grid { padding-bottom: 42px }
-    .home-page .quick-stats { grid-template-columns: repeat(2,1fr); gap: 8px }
-    .home-page .quick-stats span { min-height: 56px; display: grid; place-items: center; align-content: center }
-    .home-page .quick-stats span:last-child { grid-column: 1 / -1 }
 }
 
 @media (max-width: 360px) {
@@ -1503,3 +1495,29 @@ footer .container {
 .modern-card h2 { font-size: clamp(28px, 3vw, 42px); line-height: 1.14; letter-spacing: -.04em }
 body:has(.page-hero) .about-video { background-image: url("product%20image%20box/aluminium-profiles-detail.jpg") }
 body:has(.page-hero) .about-video figcaption { display: none }
+
+/* Home hero: one authoritative mobile layout, isolated from other pages. */
+@media (max-width: 768px) {
+    .home-page .hero,
+    .home-page .hero-grid,
+    .home-page .hero-copy { width: 100%; max-width: 100%; min-width: 0 }
+
+    .home-page .hero { min-height: 0 }
+    .home-page .hero-grid { display: block; padding: 32px 0 42px }
+    .home-page .hero-copy { padding: 18px; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,.82); box-shadow: 0 12px 28px rgba(17,29,49,.06) }
+    .home-page .shop-images { display: none }
+
+    .home-page .home-loop { width: 100%; max-width: 100%; min-width: 0 }
+    .home-page .hero-location { display: flex; max-width: 100%; min-width: 0; align-items: flex-start }
+    .home-page .hero-location span,
+    .home-page .intro,
+    .home-page .hero h1 { min-width: 0; overflow-wrap: anywhere }
+    .home-page .hero h1 { font-size: clamp(38px, 11vw, 48px) }
+    .home-page .button { max-width: 100%; white-space: normal }
+
+    .home-page .quick-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; max-width: 100%; min-width: 0; gap: 8px; margin-top: 24px }
+    .home-page .quick-stats span,
+    .home-page .quick-stats span:first-child { min-width: 0; padding: 10px 7px; border: 1px solid var(--line); border-radius: 6px; background: #fff; overflow-wrap: anywhere; text-align: center }
+    .home-page .quick-stats span:last-child { grid-column: 1 / -1 }
+    .home-page .quick-stats b { font-size: 13px }
+}

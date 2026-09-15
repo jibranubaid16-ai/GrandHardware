@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore Grand Hardware's complete catalog of Aluminium Sections, Profiles, Door & Window extrusions and hardware fittings in Kolkata.">
+  <title>Grand Hardware | Aluminium Sections & Profiles Catalog</title>
+  
+  <!-- Open Graph / SEO -->
+  <meta property="og:title" content="Grand Hardware | Aluminium Sections & Profiles Catalog">
+  <meta property="og:description" content="Explore top-quality aluminium sections, profiles, channels, angles and hardware fittings at Grand Hardware, Kolkata.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html#home">
+        <img src="logo/WhatsApp%20Image%202026-09-14%20at%2010.08.38%20PM.jpeg" alt="Grand Hardware logo">
+        <span><b>Grand Hardware</b><small>House of Aluminium</small></span>
+      </a>
+      <button class="menu-button" aria-label="Open menu" aria-expanded="false">Menu</button>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html#home">Home</a>
+        <a class="active" href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+        <a class="nav-cta" href="contact.html#inquiry">Get a quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Marquee Ticker -->
+  <main>
+    <!-- Products Catalog Hero -->
+    <section class="products-hero">
+      <div class="container">
+        <div class="hero-catalog-wrap">
+          <p class="label">Architectural &amp; Industrial Extrusions</p>
+          <h1>Aluminum Sections &amp; Profiles</h1>
+          <p class="catalog-subtitle">Explore our range of aluminum sections and profiles for hardware, fabrication and architectural applications.</p>
+          
+          <!-- Search & Filter Controls -->
+          <div class="catalog-controls">
+            <div class="search-box">
+              <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <input type="text" id="searchInput" placeholder="Search sections e.g. Top, Runner, Angle, Square Tube..." aria-label="Search aluminum products">
+              <button id="clearSearchBtn" class="clear-search-btn" aria-label="Clear search" style="display: none;">&times;</button>
+            </div>
+            
+            <div class="filter-tabs" role="tablist" aria-label="Filter products by category">
+              <button class="filter-tab active" data-category="all" role="tab" aria-selected="true">All Products</button>
+              <button class="filter-tab" data-category="Aluminum Sections" role="tab" aria-selected="false">Aluminum Sections</button>
+              <button class="filter-tab" data-category="Door & Window Profiles" role="tab" aria-selected="false">Door & Window Profiles</button>
+              <button class="filter-tab" data-category="Hardware Fittings" role="tab" aria-selected="false">Hardware Fittings</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Products Display Section -->
+    <section class="section catalog-grid-section">
+      <div class="container">
+        <!-- Results Counter & Status -->
+        <div class="catalog-header-meta">
+          <div class="meta-title">
+            <h2 id="catalogCategoryTitle">Aluminum Sections Range</h2>
+            <p id="catalogResultsCount">Showing 10 aluminum profiles</p>
+          </div>
+        </div>
+
+        <!-- Product Cards Grid -->
+        <div class="product-grid" id="productGrid">
+          <!-- Dynamically loaded via products.js -->
+        </div>
+
+        <!-- Empty State Container -->
+        <div id="emptyState" class="empty-state" style="display: none;">
+          <div class="empty-icon">🔍</div>
+          <h3>No matching products found</h3>
+          <p>We couldn't find any aluminum sections matching your search query. Try searching for "Top", "Runner", "Angle", "EURO", or clear filters.</p>
+          <button id="resetSearchBtn" class="button">View All Products</button>
+        </div>
+
+        <!-- Recently Viewed Section -->
+        <div id="recentlyViewedWrap" class="recently-viewed-section" style="display: none;">
+          <div class="section-title">
+            <p class="label">Your Browse History</p>
+            <h2>Recently Viewed Products</h2>
+          </div>
+          <div class="product-grid" id="recentlyViewedGrid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Custom Requirement & Bulk Inquiry CTA -->
+    <section class="section cta-banner-section">
+      <div class="container">
+        <div class="cta-banner-card">
+          <div class="cta-content">
+            <span class="cta-badge">Bulk &amp; Wholesale Enquiries</span>
+            <h2>Need a Custom Requirement?</h2>
+            <p>Contact our sales team for product availability, custom cut lengths, technical specifications and bulk pricing for your fabrication projects.</p>
+          </div>
+          <div class="cta-actions">
+            <button class="button light" id="openQuoteModalBtn">Request a Quote</button>
+            <a class="button whatsapp-btn" href="https://wa.me/8240522314?text=Hello%20Grand%20Hardware,%20I%20have%20a%20custom%20aluminum%20requirement.%20Please%20guide%20me." target="_blank" rel="noopener">
+              <img class="contact-icon" src="all%20svg%20logo/whatsapp-svgrepo-com.svg" alt=""> WhatsApp Us
+            </a>
+            <a class="button phone-btn" href="tel:8240522314">Call Us Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Preserved Contact Section -->
+    <section class="contact" id="contact">
+      <div class="container contact-panel">
+        <div class="contact-copy">
+          <p class="label">Need help finding a product?</p>
+          <h2>Let's build the right solution.</h2>
+          <p>From a single section to a bulk requirement, share your list and get practical guidance from our team.</p>
+          <a class="button light" href="https://wa.me/8240522314" target="_blank" rel="noopener">
+            <img class="contact-icon" src="all%20svg%20logo/whatsapp-svgrepo-com.svg" alt="">WhatsApp us
+          </a>
+        </div>
+        <aside class="contact-card">
+          <p class="availability"><span></span>Ready to help with your requirement</p>
+          <div class="contact-stats">
+            <p><b>500+</b><span>Products in range</span></p>
+            <p><b>Since 1990</b><span>Serving Kolkata</span></p>
+          </div>
+          <div class="contact-links">
+            <a href="tel:8240522314"><img class="contact-icon" src="all%20svg%20logo/whatsapp-svgrepo-com.svg" alt="">8240522314</a>
+            <a href="mailto:grandhardware37@gmail.com"><img class="contact-icon" src="all%20svg%20logo/gmail-svgrepo-com.svg" alt="">grandhardware37@gmail.com</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- Quote Modal -->
+  <div id="quoteModal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-container" role="dialog" aria-labelledby="modalTitle">
+      <button class="modal-close" id="closeQuoteModalBtn" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <p class="label">Grand Hardware Inquiry</p>
+        <h3 id="modalTitle">Request a Product Quote</h3>
+        <p>Fill out the form below to receive pricing and availability details from our Kolkata sales team.</p>
+      </div>
+      <form class="contact-form modal-form" id="quoteModalForm">
+        <label>Selected Product
+          <input type="text" id="quoteProductName" name="product" value="Aluminum Sections" readonly>
+        </label>
+        <label>Your Name
+          <input name="name" type="text" placeholder="e.g. Priya Sharma" autocomplete="name" required>
+        </label>
+        <label>
+          <span><img class="field-icon" src="all%20svg%20logo/whatsapp-svgrepo-com.svg" alt="">Phone / WhatsApp</span>
+          <input name="phone" type="tel" placeholder="+91 98765 43210" autocomplete="tel" required>
+        </label>
+        <label>
+          <span><img class="field-icon" src="all%20svg%20logo/gmail-svgrepo-com.svg" alt="">Email</span>
+          <input name="email" type="email" placeholder="grandhardware37@gmail.com" autocomplete="email">
+        </label>
+        <label class="message">Requirements &amp; Quantities
+          <textarea name="text" rows="4" placeholder="Mention required lengths, quantity, thickness, or finish..." required></textarea>
+        </label>
+        <div class="contact-actions">
+          <button class="button light" type="button" data-modal-submit="whatsapp">
+            <img class="contact-icon" src="all%20svg%20logo/whatsapp-svgrepo-com.svg" alt="">Send via WhatsApp
+          </button>
+          <button class="button email-button" type="button" data-modal-submit="email">
+            <img class="contact-icon" src="all%20svg%20logo/gmail-svgrepo-com.svg" alt="">Send via Email
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scroll To Top Button -->
+  <button id="scrollToTopBtn" class="scroll-top-btn" aria-label="Scroll to top">↑</button>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <span>© 2026 Grand Hardware</span>
+      <span>37 Grant Street, Kolkata</span>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="products-data.js"></script>
+  <script src="script.js"></script>
+  <script src="products.js"></script>
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Detailed specifications, 3D product view, and bulk enquiry for aluminum sections at Grand Hardware Kolkata.">
+  <title id="pageTitle">Grand Hardware | Product Details</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="product-detail-page">
+
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html#home">
+        <img src="logo/WhatsApp%20Image%202026-09-14%20at%2010.08.38%20PM.jpeg" alt="Grand Hardware logo">
+        <span><b>Grand Hardware</b><small>House of Aluminium</small></span>
+      </a>
+      <button class="menu-button" aria-label="Open menu" aria-expanded="false">Menu</button>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html#home">Home</a>
+        <a class="active" href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+        <a class="nav-cta" href="contact.html#inquiry">Get a quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Marquee Ticker -->
+  <main>
+    <!-- Breadcrumb & Top Bar -->
+    <div class="detail-breadcrumb-bar">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="sep">/</span>
+          <a href="products.html">Products</a>
+          <span class="sep">/</span>
+          <span id="breadcrumbCategory">Aluminum Sections</span>
+          <span class="sep">/</span>
+          <span class="current" id="breadcrumbProductName">Product Detail</span>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Product Detail Main Hero Split -->
+    <section class="section detail-hero-section">
+      <div class="container">
+        <div class="detail-grid">
+          
+          <!-- Column 1: 3D Product Presentation Viewer -->
+          <div class="viewer-column">
+            <div class="viewer-card">
+              <div class="viewer-header">
+                <span class="badge-3d"><span></span> 3D Interactive View</span>
+                <span class="material-tag">Material: Aluminium</span>
+              </div>
+              
+              <!-- Three.js 3D Canvas Box -->
+              <div class="canvas-wrapper" id="canvasWrapper">
+                <canvas id="threeCanvas"></canvas>
+                
+                <!-- 2D Fallback Image (shown if WebGL is off or toggled) -->
+                <div id="fallbackImageWrap" class="fallback-image-wrap" style="display: none;">
+                  <img id="fallbackProductImg" src="" alt="Product preview">
+                </div>
+
+                <!-- 3D Controls Overlay -->
+                <div class="viewer-overlay-tips">
+                  <span>Drag to rotate</span>
+                  <span>Scroll or pinch to zoom</span>
+                </div>
+
+                <!-- Interactive Viewer Controls Toolbar -->
+                <div class="viewer-toolbar">
+                  <button id="autoRotateBtn" class="viewer-tool-btn" title="Toggle Auto Rotation">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                    <span>Auto Rotate</span>
+                  </button>
+                  <button id="resetCameraBtn" class="viewer-tool-btn" title="Reset View">
+                    <span>Reset View</span>
+                  </button>
+                  <button id="togglePhotoBtn" class="viewer-tool-btn" title="Toggle Photo Preview">
+                    <span>Photo Mode</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="viewer-footer-note">
+                <p>Interactive aluminium profile preview — drag, zoom or switch to the product photo.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Product Specs & Direct Inquiry Actions -->
+          <div class="info-column">
+            <a href="products.html" class="back-link">← Back to Products catalog</a>
+            <span class="detail-category-badge" id="productCategoryBadge">Aluminum Sections</span>
+            <h1 class="detail-title" id="productTitle">Top Aluminum Section</h1>
+            <p class="detail-short-desc" id="productShortDesc">Premium upper guide rail and header profile designed for smooth sliding window and door track assemblies.</p>
+
+            <!-- Quick Spec Pills -->
+            <div class="spec-pills">
+              <div class="spec-pill">
+                <span class="pill-label">Material</span>
+                <span class="pill-value" id="specMaterial">Aluminium</span>
+              </div>
+              <div class="spec-pill">
+                <span class="pill-label">Availability</span>
+                <span class="pill-value">In Stock • Kolkata</span>
+              </div>
+              <div class="spec-pill">
+                <span class="pill-label">Delivery</span>
+                <span class="pill-value">All India Shipping</span>
+              </div>
+            </div>
+
+            <!-- Inquiry Action Buttons -->
+            <div class="detail-action-buttons">
+              <button class="button light detail-btn quote-btn" id="detailQuoteBtn">
+                Request a Quote
+              </button>
+              <a class="button detail-btn whatsapp-btn" id="detailWhatsappLink" href="#" target="_blank" rel="noopener">
+                <img class="contact-icon" src="all%20svg%20logo/whatsapp-svgrepo-com.svg" alt="">
+                WhatsApp Enquiry
+              </a>
+              <a class="button detail-btn phone-btn" href="tel:8240522314">
+                Call Now
+              </a>
+            </div>
+
+            <div class="guarantee-box">
+              <p>✔ Genuine architectural aluminium alloy</p>
+              <p>✔ Bulk discount pricing for fabricators &amp; contractors</p>
+              <p>✔ Custom length cuts available upon request</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Deep Information Tabs / Sections -->
+    <section class="section detail-content-section">
+      <div class="container">
+        <div class="content-split-grid">
+          
+          <!-- Overview & Description -->
+          <div class="main-content-col">
+            <div class="content-block">
+              <p class="label">Product Overview</p>
+              <h2>Description &amp; Specifications</h2>
+              <p class="lead-paragraph" id="productFullDesc">Loading full description...</p>
+            </div>
+
+            <!-- Common Applications -->
+            <div class="content-block">
+              <h3>Common Applications</h3>
+              <ul class="feature-checklist" id="applicationsList">
+                <!-- Loaded via JS -->
+              </ul>
+            </div>
+
+            <!-- Key Features -->
+            <div class="content-block">
+              <h3>Key Features &amp; Benefits</h3>
+              <ul class="feature-checklist" id="featuresList">
+                <!-- Loaded via JS -->
+              </ul>
+            </div>
+          </div>
+
+          <!-- Specs Side Box -->
+          <div class="side-specs-col">
+            <div class="side-specs-card">
+              <h3>Technical Details</h3>
+              <div class="spec-row">
+                <span class="spec-key">Category</span>
+                <span class="spec-val" id="sideCategory">Aluminum Sections</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-key">Material Grade</span>
+                <span class="spec-val">Architectural Aluminium</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-key">Surface Finish</span>
+                <span class="spec-val">Mill / Anodized / Powder Coated</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-key">Dimensions &amp; Thickness</span>
+                <span class="spec-val spec-disclaimer" id="sideSpecs">Available specifications can be confirmed with our sales team.</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-key">Location Support</span>
+                <span class="spec-val">Grand Hardware • Kolkata</span>
+              </div>
+
+              <div class="specs-cta-note">
+                <p><strong>Note:</strong> Custom alloy grades, exact dimensions and cutting tolerances can be confirmed directly with our Kolkata sales desk.</p>
+                <button class="button light block-btn" id="sideQuoteBtn">Contact Sales Team</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Products Showcase -->
+    <section class="section related-products-section">
+      <div class="container">
+        <div class="section-title">
+          <p class="label">Complementary Sections</p>
+          <h2>Related Products</h2>
+          <p>Explore matching aluminum profiles frequently specified together.</p>
+        </div>
+        <div class="product-grid" id="relatedGrid">
+          <!-- Loaded via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Preserved Contact Section -->
+    <section class="contact" id="contact">
+      <div class="container contact-panel">
+        <div class="contact-copy">
+          <p class="label">Need help finding a product?</p>
+          <h2>Let's build the right solution.</h2>
+          <p>From a single section to a bulk requirement, share your list and get practical guidance from our team.</p>
+          <a class="button light" href="https://wa.me/8240522314" target="_blank" rel="noopener">
+            <img class="contact-icon" src="all%20svg%20logo/whatsapp-svgrepo-com.svg" alt="">WhatsApp us
+          </a>
+        </div>
+        <aside class="contact-card">
+          <p class="availability"><span></span>Ready to help with your requirement</p>
+          <div class="contact-stats">
+            <p><b>500+</b><span>Products in range</span></p>
+            <p><b>Since 1990</b><span>Serving Kolkata</span></p>
+          </div>
+          <div class="contact-links">
+            <a href="tel:8240522314"><img class="contact-icon" src="all%20svg%20logo/whatsapp-svgrepo-com.svg" alt="">8240522314</a>
+            <a href="mailto:grandhardware37@gmail.com"><img class="contact-icon" src="all%20svg%20logo/gmail-svgrepo-com.svg" alt="">grandhardware37@gmail.com</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- Quote Modal -->
+  <div id="quoteModal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-container" role="dialog" aria-labelledby="modalTitle">
+      <button class="modal-close" id="closeQuoteModalBtn" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <p class="label">Grand Hardware Inquiry</p>
+        <h3 id="modalTitle">Request Product Quote</h3>
+        <p>Fill out the form below to receive pricing and availability details from our Kolkata sales team.</p>
+      </div>
+      <form class="contact-form modal-form" id="quoteModalForm">
+        <label>Selected Product
+          <input type="text" id="quoteProductName" name="product" value="" readonly>
+        </label>
+        <label>Your Name
+          <input name="name" type="text" placeholder="e.g. Priya Sharma" autocomplete="name" required>
+        </label>
+        <label>
+          <span><img class="field-icon" src="all%20svg%20logo/whatsapp-svgrepo-com.svg" alt="">Phone / WhatsApp</span>
+          <input name="phone" type="tel" placeholder="+91 98765 43210" autocomplete="tel" required>
+        </label>
+        <label>
+          <span><img class="field-icon" src="all%20svg%20logo/gmail-svgrepo-com.svg" alt="">Email</span>
+          <input name="email" type="email" placeholder="grandhardware37@gmail.com" autocomplete="email">
+        </label>
+        <label class="message">Requirements &amp; Quantities
+          <textarea name="text" rows="4" placeholder="Mention required lengths, quantity, thickness, or finish..." required></textarea>
+        </label>
+        <div class="contact-actions">
+          <button class="button light" type="button" data-modal-submit="whatsapp">
+            <img class="contact-icon" src="all%20svg%20logo/whatsapp-svgrepo-com.svg" alt="">Send via WhatsApp
+          </button>
+          <button class="button email-button" type="button" data-modal-submit="email">
+            <img class="contact-icon" src="all%20svg%20logo/gmail-svgrepo-com.svg" alt="">Send via Email
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scroll To Top Button -->
+  <button id="scrollToTopBtn" class="scroll-top-btn" aria-label="Scroll to top">↑</button>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <span>© 2026 Grand Hardware</span>
+      <span>37 Grant Street, Kolkata</span>
+    </div>
+  </footer>
+
+  <!-- External Three.js Library CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Scripts -->
+  <script src="products-data.js"></script>
+  <script src="script.js"></script>
+  <script src="product-detail.js"></script>
+</body>
+</html>

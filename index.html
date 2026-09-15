@@ -16,6 +16,9 @@
     .ticker{overflow:hidden;background:var(--orange);color:#fff}.ticker-track{display:flex;width:max-content;animation:ticker-scroll 26s linear infinite}.ticker-items{display:flex;flex:none;align-items:center;gap:42px;padding:14px 21px;font:700 11px var(--sans);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}.ticker-items span::after{content:"*";margin-left:42px;color:#111d31}@keyframes ticker-scroll{to{transform:translateX(-50%)}}@media(prefers-reduced-motion:reduce){.ticker-track{animation:none}}
   </style>
   <style>
+    .home-loop{max-width:470px;overflow:hidden;margin:0 0 18px;color:#253750;font:700 12px var(--sans);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}.home-loop-track{display:flex;width:max-content;animation:home-loop-scroll 18s linear infinite}.home-loop-items{display:flex;flex:none;gap:30px;padding-right:30px}.home-loop span::before{content:"•";margin-right:10px;color:var(--orange)}@keyframes home-loop-scroll{to{transform:translateX(-50%)}}@media(prefers-reduced-motion:reduce){.home-loop-track{animation:none}}@media(max-width:768px){.home-loop{max-width:100%;margin-bottom:14px;font-size:10px;letter-spacing:.06em}.hero-location{margin-bottom:14px;line-height:1.45}.hero-location img{width:26px;height:26px}}
+  </style>
+  <style>
     .contact-icon{width:18px;height:18px;object-fit:contain}.contact-form label>span{display:flex;align-items:center;gap:7px}.field-icon{width:15px;height:15px;object-fit:contain}
   </style>
   <style>.contact-form .button.light{color:#fff;background:var(--orange);border-color:var(--orange)}</style>
@@ -40,7 +43,7 @@
     .about-grid{grid-template-columns:.9fr 1fr}.about-side .about-video{width:100%;margin-top:25px}.about-content{display:block}.about-video video{height:270px}@media(max-width:760px){.about-grid{grid-template-columns:1fr}.about-side .about-video{max-width:none}.about-video video{height:240px}}
   </style>
 </head>
-<body class="intro-open">
+<body class="intro-open home-page">
   <section class="intro-screen" aria-label="Welcome to Grand Hardware">
     <div class="intro-content">
       <img class="intro-logo" src="logo/WhatsApp%20Image%202026-09-14%20at%2010.08.38%20PM.jpeg" alt="Grand Hardware logo">
@@ -54,26 +57,19 @@
     <div class="container nav-wrap">
       <a class="brand" href="#home"><img src="logo/WhatsApp%20Image%202026-09-14%20at%2010.08.38%20PM.jpeg" alt="Grand Hardware logo"><span><b>Grand Hardware</b><small>House of Aluminium</small></span></a>
       <button class="menu-button" aria-label="Open menu" aria-expanded="false">Menu</button>
-      <nav class="nav" aria-label="Main navigation"><a class="active" href="#home">Home</a><a href="#products">Products</a><a href="#about">About</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></nav>
+      <nav class="nav" aria-label="Main navigation"><a class="active" href="index.html">Home</a><a href="products.html">Products</a><a href="about.html">About</a><a href="reviews.html">Reviews</a><a href="contact.html">Contact</a><a class="nav-cta" href="contact.html#inquiry">Get a quote</a></nav>
     </div>
   </header>
-  <section class="ticker" aria-label="Grand Hardware highlights">
-    <div class="ticker-track">
-      <div class="ticker-items"><span>Aluminium Profiles</span><span>Door &amp; Window Sections</span><span>Hardware Fittings</span><span>Bulk Orders Welcome</span><span>Trusted Since 1990</span><span>Kolkata Delivery</span></div>
-      <div class="ticker-items" aria-hidden="true"><span>Aluminium Profiles</span><span>Door &amp; Window Sections</span><span>Hardware Fittings</span><span>Bulk Orders Welcome</span><span>Trusted Since 1990</span><span>Kolkata Delivery</span></div>
-    </div>
-  </section>
-
   <main>
     <section class="hero" id="home">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="label">Trusted aluminium supplier in Kolkata</p>
-          <a class="hero-location" href="https://www.google.com/maps/search/?api=1&amp;query=37+Grant+Street,+Kolkata,+West+Bengal+700013" target="_blank" rel="noopener"><img src="map%20logo/f1f869091988a0e482808ad072201080.jpg" alt="Map pin"><span>Visit our shop at 37 Grant Street, Kolkata</span></a>
+          <div class="home-loop" aria-label="Grand Hardware highlights"><div class="home-loop-track"><div class="home-loop-items"><span>Quality aluminium for every project</span><span>Trusted service in Kolkata</span><span>Bulk orders welcome</span></div><div class="home-loop-items" aria-hidden="true"><span>Quality aluminium for every project</span><span>Trusted service in Kolkata</span><span>Bulk orders welcome</span></div></div></div>
+          <a class="hero-location" href="https://www.google.com/maps/search/?api=1&amp;query=37+Grant+Street,+Kolkata,+West+Bengal+700013" target="_blank" rel="noopener"><span>Visit our shop at 37 Grant Street, Kolkata</span></a>
           <h1>Grand Hardware</h1>
           <p class="subhead">House of Aluminium</p>
           <p class="intro">Aluminium profiles, sections, channels and hardware fittings for homes, fabricators and commercial projects.</p>
-          <a class="button" href="#products">View products <span>↓</span></a>
+          <a class="button" href="products.html">View products <span>→</span></a>
           <div class="quick-stats"><span><b>500+</b> Products</span><span><b>All India</b> Delivery</span><span><b>Since 1990</b> Serving Kolkata</span></div>
         </div>
         <div class="shop-images">
@@ -100,17 +96,19 @@
           <article class="product-card"><div class="product-image"><img src="product%20image%20box/6145209314604421804.jpg" alt="Aluminium stock bundles" loading="lazy" decoding="async"></div><h3>Aluminium Stock</h3></article>
           <article class="product-card"><div class="product-image"><img src="product%20image%20box/6145209314604421810.jpg" alt="Kitchen hardware storage fitting" loading="lazy" decoding="async"></div><h3>Kitchen Storage Fittings</h3></article>
         </div>
+        <p class="home-catalog-action"><a class="button" href="products.html">Browse full catalog <span>→</span></a></p>
       </div>
     </section>
 
     <section class="section about" id="about"><div class="container about-grid"><div class="about-side"><p class="label">About Grand Hardware</p><figure class="about-video"><video autoplay muted loop playsinline aria-label="Aluminium installation work"><source src="video/Workers_processing_and_installin%E2%80%A6_20260915000203_gwr_video_mvp.mp4" type="video/mp4"></video><figcaption>Materials in action</figcaption></figure></div><div class="about-content"><h2>Practical solutions for aluminium work.</h2><p>From everyday aluminium sections to architectural and hardware fittings, Grand Hardware helps customers source the right material for the job.</p></div></div></section>
+    <section class="supply-strip" aria-label="Aluminium supply capability"><div class="container supply-grid"><div><p class="label">Built for the job</p><h2>Profiles, fittings and practical advice in one place.</h2><p>For a single window section or a complete fabrication list, our team helps you choose the right material before you buy.</p><a class="text-link" href="contact.html#inquiry">Send your requirement <span>→</span></a></div><figure><img src="product%20image%20box/aluminium-warehouse-hero.jpg" alt="Aluminium profiles stored in a modern warehouse" loading="lazy" decoding="async"><figcaption>Aluminium profiles ready for fabrication</figcaption></figure></div></section>
     <section class="contact" id="contact">
       <div class="container contact-panel">
-        <div class="contact-copy"><p class="label">Need help finding a product?</p><h2>Let's build the right solution.</h2><p>From a single section to a bulk requirement, share your list and get practical guidance from our team.</p><a class="button light" href="https://wa.me/82405522314" target="_blank" rel="noopener"><img class="contact-icon" src="all%20svg%20logo/whatsapp-svgrepo-com.svg" alt="">WhatsApp us</a></div>
+        <div class="contact-copy"><p class="label">Need help finding a product?</p><h2>Let's build the right solution.</h2><p>From a single section to a bulk requirement, share your list and get practical guidance from our team.</p><a class="button light" href="https://wa.me/8240522314" target="_blank" rel="noopener"><img class="contact-icon" src="all%20svg%20logo/whatsapp-svgrepo-com.svg" alt="">WhatsApp us</a></div>
         <aside class="contact-card">
           <p class="availability"><span></span>Ready to help with your requirement</p>
           <div class="contact-stats"><p><b>500+</b><span>Products in range</span></p><p><b>Since 1990</b><span>Serving Kolkata</span></p></div>
-          <div class="contact-links"><a href="tel:82405522314"><img class="contact-icon" src="all%20svg%20logo/whatsapp-svgrepo-com.svg" alt="">82405522314</a><a href="mailto:grandhardware37@gmail.com"><img class="contact-icon" src="all%20svg%20logo/gmail-svgrepo-com.svg" alt="">grandhardware37@gmail.com</a></div>
+          <div class="contact-links"><a href="tel:8240522314"><img class="contact-icon" src="all%20svg%20logo/whatsapp-svgrepo-com.svg" alt="">8240522314</a><a href="mailto:grandhardware37@gmail.com"><img class="contact-icon" src="all%20svg%20logo/gmail-svgrepo-com.svg" alt="">grandhardware37@gmail.com</a></div>
         </aside>
       </div>
     </section>

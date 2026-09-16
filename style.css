@@ -59,9 +59,9 @@ body {
 }
 
 .brand img {
-    width: 34px;
-    height: 34px;
-    object-fit: cover;
+    width: auto;
+    height: 45px;
+    object-fit: contain;
     border-radius: 7px
 }
 
